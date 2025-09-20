@@ -1,64 +1,84 @@
+// .navbar {
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 70px;
+//     padding: 0 5%;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     background: rgba(15, 15, 15, 0.5); // efeito vidro
+//     backdrop-filter: blur(10px);
+//     z-index: 1000;
+   
+//     .logo {
+//       font-size: 1.5rem;
+//       font-weight: bold;
+//       color: #000000;
+//       letter-spacing: 2px;
+//     }
+  
+//     .nav-links {
+//       list-style: none;
+//       display: flex;
+//       gap: 2rem;
+  
+//       li {
+//         color: #ffffff;
+//         cursor: pointer;
+//         font-weight: 500;
+//         padding: 8px 15px;
+//         border-radius: 12px;
+//         transition: all 0.3s ease;
+//         position: relative;
+//         overflow: hidden;
+  
+//         // efeito vidro no hover
+//         &:hover {
+//           background: rgba(0, 0, 0, 0.1);
+//           backdrop-filter: blur(15px);
+//           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+//           transform: translateY(-3px);
+//         }
+//       }
+//     }
+//   }
+  
+//   // Responsividade
+//   @media (max-width: 768px) {
+//     .navbar {
+//       flex-direction: column;
+//       height: auto;
+//       padding: 10px 5%;
+  
+//       .nav-links {
+//         flex-direction: column;
+//         align-items: center;
+//         gap: 1rem;
+//         margin-top: 10px;
+//       }
+//     }
+//   }
+  
+
+
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 70px;
-    padding: 0 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba(15, 15, 15, 0.5); // efeito vidro
-    backdrop-filter: blur(10px);
-    z-index: 1000;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  
-    .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #ffffff;
-      letter-spacing: 2px;
-    }
-  
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 2rem;
-  
-      li {
-        color: #ffffff;
-        cursor: pointer;
-        font-weight: 500;
-        padding: 8px 15px;
-        border-radius: 12px;
-        transition: all 0.3s ease;
-        position: relative;
-        overflow: hidden;
-  
-        // efeito vidro no hover
-        &:hover {
-          background: rgba(255, 255, 255, 0.1);
-          backdrop-filter: blur(15px);
-          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-          transform: translateY(-3px);
-        }
-      }
-    }
+  background-color: transparent; // Fundo transparente
+  padding-top: 2rem;
+  padding-right: 3rem;
+}
+
+.nav-link {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ffffff !important; // Força a cor branca
+  margin-left: 1.5rem;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #a0a0a0 !important; // Efeito hover
   }
-  
-  // Responsividade
-  @media (max-width: 768px) {
-    .navbar {
-      flex-direction: column;
-      height: auto;
-      padding: 10px 5%;
-  
-      .nav-links {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-        margin-top: 10px;
-      }
-    }
-  }
-  
+}

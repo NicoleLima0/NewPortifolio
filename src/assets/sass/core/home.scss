@@ -1,0 +1,114 @@
+// .Home-container {
+//     position: relative;
+//     overflow: hidden; // Esconde qualquer coisa que saia dos limites
+//     min-height: 100vh;
+//   }
+  
+//   .Home-text-panel {
+//     background-color: #1a1a1a; // Um cinza bem escuro
+//     min-height: 100vh;
+//   }
+  
+//   .Home-image-container {
+//     width: 100%;
+//     height: 100vh;
+    
+//     .Home-image {
+//       width: 100%;
+//       height: 100%;
+//       object-fit: cover; // Garante que a imagem cubra todo o espaço sem distorcer
+//     }
+//   }
+  
+//   .Home-title {
+//     font-family: 'DM Sans', sans-serif;
+//     font-size: 6rem;
+//     font-weight: 700;
+//     letter-spacing: 2px;
+//     // A cor branca já vem do body que definimos antes
+//   }
+  
+//   // A camada de transição inicial
+//   .intro-slider {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100vh;
+//     background-color: #000000;
+//     z-index: 10;
+//   }
+  
+//   // Responsividade para telas menores
+//   @media (max-width: 768px) {
+//     .Home-text-panel {
+//       min-height: 50vh;
+//     }
+//     .Home-image-container {
+//       height: 50vh;
+//     }
+//     .Home-title {
+//       font-size: 3.5rem;
+//     }
+//   }
+
+.home-container {
+    position: relative;
+    overflow: hidden;
+    // min-height: 100vh; // Remova isso ou ajuste se causar problemas de rolagem indesejados
+  }
+  
+  .home-text-panel {
+    background-color: #1a1a1a;
+    min-height: 100vh; // Mantenha isso para a coluna de texto, ela deve ocupar a tela inteira.
+    display: flex; // Certifique-se que o conteúdo está centralizado
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .home-image-container {
+    width: 100%;
+    // height: 100vh; // <-- REMOVA ESTA LINHA para que a altura seja natural
+    
+    .home-image {
+      width: 100%; // A imagem vai ocupar 100% da largura do seu container
+      height: auto; // <-- ISSO É CRUCIAL: A altura se ajusta automaticamente para manter a proporção
+      display: block; // Remove qualquer espaço extra abaixo da imagem
+      // object-fit: cover; // <-- REMOVA OU COMENTE ESTA LINHA se você quer ver a imagem inteira sem zoom/corte
+      // Se você *ainda* quiser que ela ocupe toda a altura mas não corte, use "contain".
+      // Se quiser que ela preencha a largura e tenha sua altura natural, remova a linha.
+    }
+  }
+  
+  .home-title {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 6rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+  
+  .intro-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #000000;
+    z-index: 10;
+  }
+  
+  // Responsividade para telas menores
+  @media (max-width: 768px) {
+    .home-text-panel {
+      min-height: 50vh; // No mobile, a coluna de texto pode ser menor
+    }
+    .home-image-container {
+      // height: 50vh; // Se você removeu o height fixo para desktop, pode querer definir um min-height aqui para mobile
+      // min-height: 50vh; // Exemplo: para garantir que a imagem tenha uma altura mínima no mobile
+    }
+    .home-title {
+      font-size: 3.5rem;
+    }
+  }
