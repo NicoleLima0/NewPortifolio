@@ -19,6 +19,22 @@
     }
   }
 
+  .button-home {
+    justify-content: center;
+
+    .p-button {
+      background-color: var(--color-background-light);
+      color: var(--neutral-900);
+      border-color: var(--neutral-900);
+      border-radius: 1rem;
+      justify-content: center;
+      display: flex;
+    }
+  }
+
+  
+
+
   .home-title {
     font-family: "DM Sans", sans-serif;
     font-size: 6rem;

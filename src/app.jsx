@@ -12,7 +12,8 @@
 import React from 'react';
 import Home from "../src/components/home/index.jsx";
 import Navbar from './components/navbar/index.jsx';
-import About from './components/about/index.jsx'
+import About from './components/about/index.jsx';
+import ContactSection from './components/contact/index.jsx';
 
 // Placeholders para as outras seções
 const Section = ({ id, title }) => (
@@ -35,8 +36,10 @@ function App() {
       <main>
         <Section id="expertise" title="Expertise" />
         <Section id="portfolio" title="Portfólio" />
-        <Section id="contato" title="Fale Comigo" />
+        <ContactSection/>   
+        
       </main>
+      
     </>
   );
 }

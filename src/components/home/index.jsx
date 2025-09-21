@@ -2,7 +2,7 @@ import React, { useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
 import "../../assets/sass/core/navbar.scss";
 import developerImage from "../../assets/images/foto_perfil.png";
-import { Button } from 'primereact/button';
+import { Button } from "primereact/button";
 
 const Home = () => {
   const component = useRef(null);
@@ -50,9 +50,12 @@ const Home = () => {
             <div className="Home-content">
               <h1 className="Home-title">Desenvolvedora front-end</h1>
               <p>A mais pica de todas!!</p>
-              <div className="d-flex gap-2">
-                <Button icon="pi pi-check" label="Projetos"/>
-                <Button icon="pi pi-check" label="Contato"/>
+              <div className="button-home d-flex gap-2">
+                <Button icon="pi pi-check" label="Projetos" />
+                <Button
+                  icon="pi pi-whatsapp"
+                  label="Contato"
+                />
               </div>
             </div>
           </div>
