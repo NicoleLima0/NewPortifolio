@@ -11,7 +11,10 @@
   },
   "dependencies": {
     "bootstrap": "^5.3.8",
+    "framer-motion": "^12.23.16",
     "gsap": "^3.13.0",
+    "primeicons": "^7.0.0",
+    "primereact": "^10.9.7",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "sass": "^1.92.1"
