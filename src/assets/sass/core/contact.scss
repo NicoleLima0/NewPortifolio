@@ -1,125 +1,74 @@
-
-$primary-color: #455ce9; 
-$primary-text-color: #ffffff;
-$secondary-text-color: #b0bec5;
-$background-primary: #1c1f20;
-$background-secondary: #1c1f20;
-// $background-card: #f5f5f5;
-$border-color: #455ce9;
-
-
 .contact-section {
   min-height: 100vh;
   background-color: var(--background-card);
-  color: $primary-text-color;
+  color: var(--white);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 5rem 1.5rem;
 
   .container {
-    max-width: 1152px; 
+    max-width: 1152px;
     width: 100%;
     margin: 0 auto;
   }
 
   &__title {
-    font-size: 2.5rem; 
-    font-weight: 300;
+    font-size: 2.5rem;
+    font-weight: 500;
     text-align: center;
     margin-bottom: 4rem;
-    background: linear-gradient(90deg, $primary-color, lighten($primary-color, 15%));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--neutral-900);
+    font-family: var(--font-family-1);
   }
 
   &__content {
     display: grid;
     gap: 3rem;
-    
+
     @media (min-width: 1024px) {
       grid-template-columns: 1fr 1fr;
     }
   }
 }
 
-// .contact-form {
-//   background-color: #1c1f20 !important;
-//   border: 1px solid $border-color !important;
-//   border-radius: 0.75rem;
-//   padding: 1.5rem;
-
-//   .p-card-title {
-//     color: $primary-color;
-//     font-size: 1.5rem;
-//     font-weight: 600;
-//   }
-//   .p-card-body {
-//     padding: 0.5rem;
-//   }
-
-//   .p-fluid .p-float-label {
-//     label {
-//       color: $secondary-text-color !important;
-//     }
-//     .p-inputtext, .p-inputtextarea {
-//     //   background-color: $background-primary;
-//       border: 1px solid $border-color;
-//       color: var(--background-card);
-//       &:focus {
-//         border-color: $primary-color !important;
-//         box-shadow: 0 0 0 1px $primary-color;
-//       }
-//     }
-//   }
-
-//   &__textarea {
-//     resize: none;
-//   }
-  
-//   .form-grid {
-//     display: grid;
-//     grid-template-columns: 1fr;
-//     gap: 2rem;
-//     @media (min-width: 768px) {
-//       grid-template-columns: 1fr 1fr;
-//     }
-//   }
-
-//   .p-button-custom {
-//     background-color: $primary-color;
-//     border: none;
-//     transition: all 0.3s ease;
-//     &:hover {
-//       background-color: darken($primary-color, 10%);
-//       transform: scale(1.05);
-//     }
-//   }
-// }
-
 .contact-form {
-    background-color: var(--color-background-light);
-        border-radius: 12px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-        padding: 24px; // p-6
-        transition:
-            transform 0.3s ease,
-            box-shadow 0.3s ease;
+  background-color: var(--color-background-light);
+  border-radius: 12px;
+  box-shadow: var(--color-tech);
+  padding: 24px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 
-        &:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-            cursor: pointer;
-        }
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--color-tech);
+    cursor: pointer;
+  }
 
-        label {
-            font-size: 1.25rem; // text-xl
-            font-weight: 600; // font-semibold
-            color: var(--neutral-900);
-            margin-bottom: 8px; // mb-2
-        }
+  label {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--neutral-900);
+    margin-bottom: 8px;
+  }
+
+  .p-button-custom {
+    background-color: var(--color-background-dark);
+    font-family: var(--font-family-1);
+  }
+
+  .p-inputtext:enabled:focus {
+    border-color: var(--color-tech);
+    box-shadow: 0 0 0 0.2rem #8795ef;
+  }
+
+  .p-inputtext:enabled:hover {
+    border-color: var(--color-tech);
+    box-shadow: 0 0 0 0.2rem #8795ef;
+  }
 }
-
 .contact-info {
   display: flex;
   flex-direction: column;
@@ -128,7 +77,7 @@ $border-color: #455ce9;
   &__title {
     font-size: 1.5rem;
     font-weight: 600;
-    color: $primary-color;
+    color: var(--color-background-dark);
     margin-bottom: 1.5rem;
   }
 
@@ -143,44 +92,46 @@ $border-color: #455ce9;
     align-items: center;
     gap: 1rem;
     padding: 1rem;
-    background-color: $background-secondary;
+    background-color: var(--color-background-light);
     border-radius: 0.5rem;
     text-decoration: none;
-    color: $primary-text-color;
+    color: var(---neutral-400) !important;
     transition: background-color 0.3s ease;
+    border: 1px solid var(--neutral-500);
 
     &:hover {
-      background-color: lighten($background-secondary, 5%);
+      background-color: var(--color-tech-light);
     }
   }
 
   &__icon-wrapper {
     width: 3rem;
     height: 3rem;
-    background-color: rgba($primary-color, 0.1);
+    background-color: rgba(var(--color-tech), 0.1);
     border-radius: 0.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: background-color 0.3s ease;
-    
+
     .contact-info__item:hover & {
-      background-color: rgba($primary-color, 0.2);
+      background-color: rgba(var(--color-tech), 0.2);
     }
   }
 
   &__icon {
     font-size: 1.5rem;
-    color: $primary-color;
+    color: var(--color-tech);
   }
 
   &__label {
     font-size: 0.875rem;
-    color: $secondary-text-color;
+    color: var(--neutral-500);
   }
 
   &__value {
     font-weight: 500;
+    color: var(--neutral-400);
   }
 }
 
@@ -191,36 +142,36 @@ $border-color: #455ce9;
   &__item {
     width: 3rem;
     height: 3rem;
-    background-color: $background-secondary;
+    background-color: var(--color-background-dark);
     border-radius: 0.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: $primary-text-color;
+    color: var(--white);
     font-size: 1.5rem;
     transition: all 0.3s ease;
 
     &:hover {
-      background-color: $primary-color;
-      color: $background-primary;
+      background-color: var(--color-tech);
+      color: var(--color-background-dark);
       transform: scale(1.1);
     }
   }
 }
 
 .call-to-action {
-  background-color: $background-secondary;
+  background-color: var(--background-card);
   padding: 1.5rem;
   border-radius: 0.5rem;
 
   &__title {
-    color: $primary-color;
+    color: var(--color-tech);
     font-weight: 600;
     margin-bottom: 0.5rem;
   }
 
   &__text {
-    color: $secondary-text-color;
+    color: var(--neutral-500);
     font-size: 0.875rem;
   }
 }

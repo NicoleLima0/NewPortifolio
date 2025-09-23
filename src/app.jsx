@@ -1,21 +1,9 @@
-// import Navbar from "./components/navbar";
-
-// function App() {
-//   return (
-//     <>
-//       <Navbar />
-//     </>
-//   );
-// }
-
-// export default App;
 import React from 'react';
 import Home from "../src/components/home/index.jsx";
 import Navbar from './components/navbar/index.jsx';
 import About from './components/about/index.jsx';
 import ContactSection from './components/contact/index.jsx';
 
-// Placeholders para as outras seções
 const Section = ({ id, title }) => (
   <section id={id} style={{ minHeight: '100vh', backgroundColor: '#1C1F20', color: 'white', paddingTop: '100px'}}>
     <div className="container">
@@ -34,7 +22,6 @@ function App() {
       </header>
       <About/>
       <main>
-        <Section id="expertise" title="Expertise" />
         <Section id="portfolio" title="Portfólio" />
         <ContactSection/>   
         
